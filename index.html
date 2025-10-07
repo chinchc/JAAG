@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAAG</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mb-4">
+                    JAAG: <small class="fs-2">a JSON input file Assembler for AlphaFold 3 with Glycan integration</small>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Panel - Input Forms -->
+            <div class="col-lg-8">
+                <!-- Description Panel -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <button class="btn btn-link text-start p-0 w-100"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#descriptionCollapse"
+                                aria-expanded="false"
+                                aria-controls="descriptionCollapse"
+                                style="text-decoration: none; color: inherit;">
+                            <i class="fas fa-info-circle me-2"></i><strong>About JAAG</strong>
+                            <i class="fas fa-chevron-down ms-2"></i>
+                        </button>
+                    </div>
+                    <div class="collapse" id="descriptionCollapse">
+                        <div class="card-body">
+                        <p class="mb-3">
+                            JAAG is a web-based tool designed to facilitate the assembly of input JSON files for standalone AlphaFold 3.
+                        </p>
+
+                        <h6>How to add glycans?</h6>
+                        <ol class="small">
+                            <li>Protein: 'Detect sequons' or add 'Glycosylation sites' </li>
+                            <li>Ligand: 'Glycan' is the default input type</li>
+                        </ol>
+
+                        <h6>Where to find GlycoCT?</h6>
+                        <ol class="small">
+                            <li>Draw a glycan in a popup SugarDrawer<i class="fas fa-pencil-alt ms-1 fa-sm"></i></li>
+                            <li>External glycan database: <a href="https://www.glygen.org/" target="_blank">GlyGen</a>, <a href="https://glytoucan.org/" target="_blank">GlyTouCan</a>, <a href="https://glyconnect.expasy.org/" target="_blank">GlyConnect</a>, etc</li>
+                        </ol>
+
+                        <h6>Reference</h6>
+                        <ol class="small">
+                            <li>Please refer to this paper to properly interpret the AlphaFold 3 glycan-related models:</li>
+                            Huang, C., Kannan, N., & Moremen, K. W. (2025). Modeling glycans with AlphaFold 3: capabilities, caveats, and limitations. Glycobiology, 35(10), <a href="https://doi.org/10.1093/glycob/cwaf048" target="_blank">cwaf048</a>
+                            <li>If you use JAAG in your research, please cite:</li>
+                            Huang, C., & Moremen, K. W. (2025). JAAG: a JSON input file Assembler for AlphaFold 3 with Glycan integration. <a href="https://www.biorxiv.org/" target="_blank">bioRxiv</a>
+                            <li>JAAG source code and detailed guide can be found on <a href="https://github.com/chinchc/JAAG" target="_blank">JAAG GitHub</a> and <a href="https://github.com/google-deepmind/alphafold3/blob/main/docs/input.md" target="_blank">AlphaFold 3 GitHub</a></li>
+                        </ol>
+
+                        <h6>Funding</h6>
+                        <ul class="small">
+                            <li>This project is supported by U.S. National Science Foundation BioFoundry: Glycoscience Research, Education and Training and University of Georgia</li>
+                        </ul>
+                        
+                        <div class="alert alert-info mt-3 mb-0" role="alert">
+                            <strong>Getting Started:</strong> Fill in the basic information below, then add your sequences to generate a complete AlphaFold 3 input JSON file.
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Basic Information -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Basic Information
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="jobName" class="form-label">Job Name*</label>
+                                <input type="text" class="form-control" id="jobName" placeholder="Enter job name" oninput="validateJobName(this)">
+                                <small class="text-muted">Allows letters, numbers, hyphens, and underscores</small>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="mb-2">
+                                    <button class="btn btn-outline-primary" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#advancedFunctionsCollapse"
+                                            aria-expanded="false"
+                                            aria-controls="advancedFunctionsCollapse"
+                                            style="font-size: 0.7rem; padding: 0rem 0.3rem;">
+                                        <i class="fas fa-chevron-right me-1"></i>Advanced Settings
+                                    </button>
+                                </div>
+                                <div class="collapse" id="advancedFunctionsCollapse">
+                                    <div class="card card-body">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="version" class="form-label">JSON Input Version*</label>
+                                                <select class="form-select" id="version">
+                                                    <option value="4" selected>4</option>
+                                                    <option value="3">3</option>
+                                                    <option value="2">2</option>
+                                                    <option value="1">1</option>
+                                                </select>
+                                                <small class="text-muted">
+                                                    <strong>v4:</strong> Adds descriptions for chains<br>
+                                                    <strong>v3:</strong> Adds userCCD path<br>
+                                                    <strong>v2:</strong> Adds external MSA/templates<br>
+                                                    <strong>v1:</strong> Basic format
+                                                </small>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <label class="form-label me-1 mb-0">Model Seeds*</label>
+                                                </div>
+                                                <div id="multipleSeedContainer">
+                                                    <div class="mb-2">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <label class="form-label mb-0" style="font-size: 0.7rem;">Number of</label>
+                                                            <select class="form-select form-select-sm" id="seedType" style="max-width: 100px; font-size: 0.7rem;" onchange="generateMultipleSeeds()">
+                                                                <option value="consecutive" selected >sequential</option>
+                                                                <option value="random">random</option>
+                                                            </select>
+                                                            <label class="form-label mb-0" style="font-size: 0.7rem;">seeds to generate:</label>
+                                                            <input type="number" class="form-control form-control-sm" id="seedCount"
+                                                                   value="1" min="1" max="99999"
+                                                                   title="Number of seeds to generate"
+                                                                   style="max-width: 70px; font-size: 0.7rem;"
+                                                                   oninput="validateSeedCountInput(this); generateMultipleSeeds();">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <label class="form-label mb-1">Seeds:</label>
+                                                        <textarea class="form-control" id="modelSeedsMultiple" rows="2"
+                                                                  placeholder="1"
+                                                                  oninput="validateMultipleSeedsInput(this)"
+                                                                  onblur="cleanupMultipleSeedsInput(this)"
+                                                                  title="Comma-separated seed values"
+                                                                  style="resize: vertical; min-height: 38px;">1</textarea>
+                                                        <small class="text-muted">Comma-separated seeds (1-4294967295 each)</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sequences Section -->
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span>Sequences</span>
+                        <div class="btn-group btn-group-sm">
+                            <button type="button" class="btn btn-outline-primary" onclick="addSequence('protein')">
+                                <i class="fas fa-plus me-1"></i>Protein
+                            </button>
+                            <button type="button" class="btn btn-outline-primary" onclick="addSequence('ligand')">
+                                <i class="fas fa-plus me-1"></i>Ligand
+                            </button>
+                            <button type="button" class="btn btn-outline-primary" onclick="addSequence('rna')">
+                                <i class="fas fa-plus me-1"></i>RNA
+                            </button>
+                            <button type="button" class="btn btn-outline-primary" onclick="addSequence('dna')">
+                                <i class="fas fa-plus me-1"></i>DNA
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="sequencesContainer">
+                            <p class="text-muted">Click the buttons above to add sequences</p>
+                        </div>
+                        <!-- Dynamic bonded atom pairs section will be inserted here -->
+                        <div id="dynamicBondedAtomPairsSection"></div>
+                    </div>
+                </div>
+
+
+                <!-- userCCD Input Section -->
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <button class="btn btn-link text-start p-0 flex-grow-1"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#userCCDInputCollapse"
+                                aria-expanded="false"
+                                aria-controls="userCCDInputCollapse"
+                                style="text-decoration: none; color: inherit;">
+                            <strong>Manual userCCD Input</strong>
+                            <span id="userCCDBadge" class="badge bg-secondary ms-2" style="display: none;">0</span>
+                            <i class="fas fa-chevron-down ms-2"></i>
+                        </button>
+                    </div>
+                    <div class="collapse" id="userCCDInputCollapse">
+                        <div class="card-body">
+                        <!-- Method Selection at the top -->
+                        <div class="mb-3">
+                            <label class="form-label">userCCD Input Method:</label>
+                            <div class="d-flex gap-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="userCCDMethod" id="inlineUserCCD" value="inline">
+                                    <label class="form-check-label" for="inlineUserCCD">
+                                        Inline userCCD
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="userCCDMethod" id="fileUserCCD" value="file" checked>
+                                    <label class="form-check-label" for="fileUserCCD">
+                                        userCCDPath (file)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- userCCD Code (always visible) -->
+                        <div class="mb-3">
+                            <label for="userCCDId" class="form-label">userCCD code:</label>
+                            <input type="text" class="form-control" id="userCCDId" placeholder="ABC-2" style="text-transform: uppercase;" oninput="this.value = this.value.toUpperCase().replace(/[^A-Z0-9-]/g, '')">
+                            <small class="text-muted">Use hyphen in new userCCD code to avoid parsing errors</small>
+                        </div>
+
+                        <!-- File Path Content (default) -->
+                        <div id="fileUserCCDContainer">
+                            <label for="userCCDPath" class="form-label">File Path:</label>
+                            <input type="text" class="form-control" id="userCCDPath" placeholder="path/to/file.cif">
+                            <small class="text-muted">Path to CCD mmCIF file</small>
+                        </div>
+
+                        <!-- Inline userCCD Content -->
+                        <div id="inlineUserCCDContainer" style="display: none;">
+                            <label for="userCCDInput" class="form-label">Paste userCCD mmCIF format here:</label>
+                            <textarea class="form-control" id="userCCDInput" rows="8" placeholder="Paste your userCCD mmCIF format here...&#10;&#10;Example:&#10;data_ABC&#10;_chem_comp.id ABC&#10;_chem_comp.name 'Example compound'&#10;_chem_comp.type NON-POLYMER&#10;..."></textarea>
+                        </div>
+
+                        <div class="mt-3">
+                            <button type="button" class="btn btn-outline-primary" onclick="addUserCCDToJSON()">
+                                <i class="fas fa-plus me-1"></i>Add userCCD to JSON
+                            </button>
+                        </div>
+
+                        <!-- Active userCCD List (moved from separate section) -->
+                        <div class="mt-4">
+                            <hr class="mb-3">
+                            <h6 class="text-muted">Active userCCDs:</h6>
+                            <div id="activeUserCCDsList" class="text-muted">
+                                No manual userCCD added yet.
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Right Panel - JSON Output -->
+            <div class="col-lg-4">
+
+                <div class="card sticky-top" style="top: 20px;">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span>JSON Output</span>
+                        <div class="btn-group btn-group-sm">
+                            <button type="button" class="btn btn-outline-primary" onclick="generateJSON()" style="display: none;">
+                                <i class="fas fa-sync me-1"></i>Generate
+                            </button>
+                            <button type="button" class="btn btn-outline-primary" onclick="enrichGlycanData()" title="Lookup databases for glycan information">
+                                <i class="fas fa-search me-1"></i>Lookup
+                            </button>
+                            <button type="button" class="btn btn-outline-primary" onclick="copyJSON()">
+                                <i class="fas fa-copy me-1"></i>Copy
+                            </button>
+                            <button type="button" class="btn btn-outline-primary" onclick="downloadJSON()">
+                                <i class="fas fa-download me-1"></i>Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="jsonOutput" class="json-output p-3">
+                            <span class="text-muted">Click "Generate" to create AlphaFold3 JSON</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div id="validationStatus" class="text-muted small">
+                            <i class="fa-regular fa-face-smile me-1"></i>Ready to generate JSON
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SugarDrawer Popup Modal -->
+    <div class="modal fade" id="sugarDrawerPopupModal" tabindex="-1" aria-labelledby="sugarDrawerPopupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" style="max-width: 90vw;">
+            <div class="modal-content" style="height: 90vh;">
+                <div class="modal-body" style="flex: 1; overflow: hidden; position: relative;">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; top: 10px; right: 10px; z-index: 1000;"></button>
+                    <div id="sugarDrawerPopupContainer" style="height: 100%;">
+                        <!-- SugarDrawer will be initialized here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Application JS -->
+    <script src="js/glycan-templates.js"></script>
+    <script src="js/load-glycan-templates.js"></script>
+    <script src="js/glycan-manager.js"></script>
+    <script src="js/userccd-manager.js"></script>
+    <script src="js/substituent-handler.js"></script>
+    <script src="js/sugardrawer-integration.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/sequences.js"></script>
+    <script src="js/embedded-userccd-data.js"></script>
+    <script src="js/enhanced-glycan-converter.js"></script>
+    <script src="js/enhanced-glycoct-parser.js"></script>
+    <script src="js/glycan-enrichment.js"></script>
+    <script src="js/json-generator.js"></script>
+</body>
+</html>

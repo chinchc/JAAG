@@ -1,0 +1,41 @@
+Third-Party Notices
+
+This project incorporates the following third-party software and services:
+
+Software (bundled or vendored)
+-- SugarDrawer — Apache License 2.0
+  Source: https://gitlab.com/glycoinfo/sugardrawer
+  License: sugardrawer/LICENSE
+  Notice: sugardrawer/NOTICE
+- SugarSketcher — Apache License 2.0
+  Source: https://gitlab.com/glycoinfo/sugardrawer/SugarSketcher2.git
+  Fetched as a dependency of SugarDrawer (see sugardrawer/package.json)
+
+CDN-Loaded Libraries (not redistributed here)
+- Bootstrap — MIT License
+  https://getbootstrap.com/
+  License: https://github.com/twbs/bootstrap/blob/main/LICENSE
+- Font Awesome Free — Font Awesome Free License
+  https://fontawesome.com/
+  License: https://fontawesome.com/license/free
+
+External Services / APIs (client-side calls from the browser)
+- GlyGen API — https://www.glygen.org/
+- GlyTouCan — https://glytoucan.org/
+
+Modified upstream files (SugarDrawer):
+- README.md — added JAAG integration notes and modification notice
+- package.json — added patch hooks and build script changes
+- src/index.html — UI/export display adjustments
+- src/js/react/Interface.js — export behavior tweaks
+- src/js/react/ToolHeader.js — UI header/info modal adjustments
+- src/js/react/horizonalUI/horizontalSugarList.js — UI list/substituent handling
+- src/js/script/converter/converterInterface.js — export plumbing/GlycoCT display
+
+Added files:
+- apply-patches.js — applies structure fixes to SugarSketcher and inserts modification header
+- patches/ — patch material
+
+Notes
+- All third-party components retain their original licenses and notices.
+- If any Apache-2.0 files are modified, prominent “modified by” notices are added to those files per Section 4(b) of the Apache License 2.0.

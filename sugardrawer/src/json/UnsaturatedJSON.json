@@ -1,0 +1,251 @@
+{
+  "Fragments": {},
+  "Repeat": {},
+  "Edges": {
+    "e0": {
+      "Acceptor": "m0",
+      "Donor": "m1",
+      "Position": {
+        "Acceptor": [
+          4
+        ],
+        "Donor": [
+          1
+        ]
+      },
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    },
+    "e1": {
+      "Acceptor": "m1",
+      "Donor": "m2",
+      "Position": {
+        "Acceptor": [
+          4
+        ],
+        "Donor": [
+          1
+        ]
+      },
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    },
+    "e2": {
+      "Acceptor": "m2",
+      "Donor": "m3",
+      "Position": {
+        "Acceptor": [
+          4
+        ],
+        "Donor": [
+          1
+        ]
+      },
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    }
+  },
+  "Bridge": {},
+  "Monosaccharides": {
+    "m0": {
+      "Modifications": [],
+      "TrivialName": [
+        "glc"
+      ],
+      "Substituents": [
+        {
+          "Status": "simple",
+          "Position": {
+            "Position": {
+              "Acceptor": [
+                2
+              ],
+              "Donor": [
+                0
+              ]
+            },
+            "Probability": {
+              "High": 1,
+              "Low": 1
+            },
+            "LinkageType": {
+              "Acceptor": "UNVALIDATED",
+              "Donor": "NONMONOSACCHARIDE"
+            }
+          },
+          "Notation": "S"
+        }
+      ],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "a",
+      "AnomPosition": 1,
+      "Notation": "GlcN"
+    },
+    "m1": {
+      "Modifications": [],
+      "TrivialName": [
+        "ido"
+      ],
+      "Substituents": [
+        {
+          "Status": "simple",
+          "Position": {
+            "Position": {
+              "Acceptor": [
+                2
+              ],
+              "Donor": [
+                0
+              ]
+            },
+            "Probability": {
+              "High": 1,
+              "Low": 1
+            },
+            "LinkageType": {
+              "Acceptor": "H_AT_OH",
+              "Donor": "NONMONOSACCHARIDE"
+            }
+          },
+          "Notation": "S"
+        }
+      ],
+      "Configuration": [
+        "l"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "a",
+      "AnomPosition": 1,
+      "Notation": "IdoA"
+    },
+    "m2": {
+      "Modifications": [],
+      "TrivialName": [
+        "glc"
+      ],
+      "Substituents": [
+        {
+          "Status": "simple",
+          "Position": {
+            "Position": {
+              "Acceptor": [
+                2
+              ],
+              "Donor": [
+                0
+              ]
+            },
+            "Probability": {
+              "High": 1,
+              "Low": 1
+            },
+            "LinkageType": {
+              "Acceptor": "UNVALIDATED",
+              "Donor": "NONMONOSACCHARIDE"
+            }
+          },
+          "Notation": "S"
+        },
+        {
+          "Status": "simple",
+          "Position": {
+            "Position": {
+              "Acceptor": [
+                6
+              ],
+              "Donor": [
+                0
+              ]
+            },
+            "Probability": {
+              "High": 1,
+              "Low": 1
+            },
+            "LinkageType": {
+              "Acceptor": "H_AT_OH",
+              "Donor": "NONMONOSACCHARIDE"
+            }
+          },
+          "Notation": "S"
+        }
+      ],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "a",
+      "AnomPosition": 1,
+      "Notation": "GlcN"
+    },
+    "m3": {
+      "Modifications": [
+        {
+          "Position": [
+            4,
+            5
+          ],
+          "Notation": "en"
+        }
+      ],
+      "TrivialName": [
+        "thr"
+      ],
+      "Substituents": [
+        {
+          "Status": "simple",
+          "Position": {
+            "Position": {
+              "Acceptor": [
+                2
+              ],
+              "Donor": [
+                0
+              ]
+            },
+            "Probability": {
+              "High": 1,
+              "Low": 1
+            },
+            "LinkageType": {
+              "Acceptor": "H_AT_OH",
+              "Donor": "NONMONOSACCHARIDE"
+            }
+          },
+          "Notation": "S"
+        }
+      ],
+      "Configuration": [
+        "l"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "a",
+      "AnomPosition": 1,
+      "Notation": "thrHexA"
+    }
+  }
+}

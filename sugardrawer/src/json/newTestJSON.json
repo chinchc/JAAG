@@ -1,0 +1,160 @@
+{
+  "Fragments":{},
+  "Repeat":{
+    "r2": {
+      "Min":-1,
+      "Position": {
+        "Acceptor":[4],
+        "Donor":[1]
+      },
+      "Max":-1,
+      "Start":"m2",
+      "Probability": {
+        "High":1,
+        "Low":1
+      },
+      "End":"m2",
+      "Bridge":{},
+      "LinkageType": {
+        "Acceptor":"UNVALIDATED",
+        "Donor":"UNVALIDATED"
+      }
+    },
+    "r0":{
+      "Min":0,
+      "Position": {
+        "Acceptor":[4],
+        "Donor":[1]
+      },
+      "Max":0,
+      "Start":"m0",
+      "Probability": {
+        "High":1,
+        "Low":1
+      },
+      "End":"m3",
+      "Bridge":{},
+      "LinkageType": {
+        "Acceptor":"UNVALIDATED",
+        "Donor":"UNVALIDATED"
+      }
+    },
+    "r1": {
+      "Min":-1,
+      "Position":{
+        "Acceptor":[4],
+        "Donor":[1]
+      },
+      "Max":-1,
+      "Start":"m0",
+      "Probability": {
+        "High":1,
+        "Low":1
+      },
+      "End":"m0",
+      "Bridge":{},
+      "LinkageType": {
+        "Acceptor":"UNVALIDATED",
+        "Donor":"UNVALIDATED"
+      }
+    }
+  },
+  "Edges": {
+    "e0": {
+      "Acceptor":"m0",
+      "Donor":"m1",
+      "Position": {
+        "Acceptor":[4],
+        "Donor":[1]
+      },
+      "Probability": {
+        "High":1,
+        "Low":1
+      },
+      "LinkageType": {
+        "Acceptor":"UNVALIDATED",
+        "Donor":"UNVALIDATED"
+      }
+    },
+    "e1": {
+      "Acceptor":"m1",
+      "Donor":"m2",
+      "Position": {
+        "Acceptor":[4],
+        "Donor":[1]
+      },
+      "Probability": {
+        "High":1,
+        "Low":1
+      },
+      "LinkageType": {
+        "Acceptor":"UNVALIDATED",
+        "Donor":"UNVALIDATED"
+      }
+    },
+    "e2":
+    {
+      "Acceptor":"m2",
+      "Donor":"m3",
+      "Position": {
+        "Acceptor":[4],
+        "Donor":[1]
+      },
+      "Probability": {
+        "High":1,
+        "Low":1
+      },
+      "LinkageType": {
+        "Acceptor":"UNVALIDATED",
+        "Donor":"UNVALIDATED"
+      }
+    }
+  },
+  "Bridge":{},
+  "Monosaccharides":{
+    "m0": {
+      "Modifications":[],
+      "TrivialName":["glc"],
+      "Substituents":[],
+      "Configuration":["d"],
+      "SuperClass":"HEX",
+      "RingSize":"p",
+      "AnomState":"a",
+      "AnomPosition":1,
+      "Notation":"Glc"
+    },
+    "m1": {
+      "Modifications":[],
+      "TrivialName":["glc"],
+      "Substituents":[],
+      "Configuration":["d"],
+      "SuperClass":"HEX",
+      "RingSize":"p",
+      "AnomState":"a",
+      "AnomPosition":1,
+      "Notation":"Glc"
+    },
+    "m2": {
+      "Modifications":[],
+      "TrivialName":["glc"],
+      "Substituents":[],
+      "Configuration":["d"],
+      "SuperClass":"HEX",
+      "RingSize":"p",
+      "AnomState":"a",
+      "AnomPosition":1,
+      "Notation":"Glc"
+    },
+    "m3": {
+      "Modifications":[],
+      "TrivialName":["glc"],
+      "Substituents":[],
+      "Configuration":["d"],
+      "SuperClass":"HEX",
+      "RingSize":"p",
+      "AnomState":"a",
+      "AnomPosition":1,
+      "Notation":"Glc"
+    }
+  }
+}

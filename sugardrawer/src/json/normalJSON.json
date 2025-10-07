@@ -1,0 +1,167 @@
+{
+  "WURCS": "",
+  "Aglycone": "",
+  "Fragments": {},
+  "Repeat": {},
+  "Edges": {
+    "e0": {
+      "Acceptor": "m0",
+      "Donor": "m1",
+      "Position": {
+        "Acceptor": [
+          4
+        ],
+        "Donor": [
+          1
+        ]
+      },
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    },
+    "e1": {
+      "Acceptor": "m1",
+      "Donor": "m2",
+      "Position": {
+        "Acceptor": [
+          4
+        ],
+        "Donor": [
+          1
+        ]
+      },
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    },
+    "e2": {
+      "Acceptor": "m2",
+      "Donor": "m3",
+      "Position": {
+        "Acceptor": [
+          6
+        ],
+        "Donor": [
+          1
+        ]
+      },
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    },
+    "e3": {
+      "Acceptor": "m2",
+      "Donor": "m4",
+      "Position": {
+        "Acceptor": [
+          3
+        ],
+        "Donor": [
+          1
+        ]
+      },
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    }
+  },
+  "AN": "",
+  "Bridge": {},
+  "Monosaccharides": {
+    "m0": {
+      "Modifications": [],
+      "TrivialName": [
+        "glc"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "",
+      "AnomState": "?",
+      "AnomPosition": -1,
+      "Notation": "GlcNAc"
+    },
+    "m1": {
+      "Modifications": [],
+      "TrivialName": [
+        "glc"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "b",
+      "AnomPosition": 1,
+      "Notation": "GlcNAc"
+    },
+    "m2": {
+      "Modifications": [],
+      "TrivialName": [
+        "man"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "b",
+      "AnomPosition": 1,
+      "Notation": "Man"
+    },
+    "m3": {
+      "Modifications": [],
+      "TrivialName": [
+        "man"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "a",
+      "AnomPosition": 1,
+      "Notation": "Man"
+    },
+    "m4": {
+      "Modifications": [],
+      "TrivialName": [
+        "man"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "a",
+      "AnomPosition": 1,
+      "Notation": "Man"
+    }
+  }
+}

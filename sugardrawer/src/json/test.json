@@ -1,0 +1,570 @@
+// Accession number G00026MO
+//WURCS=2.0/4,5,4/[u2122h_2*NCC/3=O][a2122h-1b_1-5_2*NCC/3=O][a1122h-1b_1-5][a1122h-1a_1-5]/1-2-3-4-4/a4-b1_b4-c1_c3-d1_c6-e1
+
+
+{
+  //"Monosaccharides"はこの糖鎖構造内の単糖を含む。
+  //どの"Monosaccharides"もユニークなナンバーで定義付けされている。
+  "Monosaccharides": {
+    "0": {
+      "Modifications": [  //修飾を示している。
+        {
+          "PositionOne": 6,
+          "Notation": "HYDROXYL"
+        }
+      ],
+      "TrivialName": [  //この単糖の基礎のタイプを示す。
+        "DGLC"  //"Configuration(立体配座)" + "Three letter code".
+        //"Configuration"は "" or "D" or "L"
+        //"Three letter code"は "Gro", "Ery", "Rib", "Ara", "All", "Alt", "Glc", "Man", "Thr", "Xyl", "Lyx", "Gul", "Ido", "Gal", "Tal"
+        //もし単糖が知られていない構造なら、"Three letter code"は "Sugar".
+        //もし単糖が定義されていない"Three letter code"なら "superClass"を"Three letter code"として使う。
+      ],
+      "RingEnd": -1,  //構造を閉じる位置を示す。"-1" or "4" or "5"
+      "AnomericSymbol": "UNKNOWN",  //"ALPHA" or "BETA" or "UNKNOWN"
+      "Subsituents": [],  //アセチルグループなどの置換の注釈
+      "SuperClass": "HEX",  //単糖の主鎖を示す。
+      "AnomericPosition": -1,  //Anomerの位置
+      "RingStart": -1,  //構造を閉じる位置を示す。"-1" or "1" or "2"
+      "Edge": {  //親側の結合
+        "Parent": [],
+        "Repeat": [],
+        "Fragment": {}
+      }
+    }
+  },
+  //"Modifications"は各炭素主鎖の修飾を示す。 各"Modifications"は"PositionOne"と"Notation"を持つ。
+  //"PositionOne"は炭素主鎖の位置を示す。
+  //どの"Modifications"も"PositionTwo"を持つこともできる。
+  //"Notation"には"UNKNOWN", "UNSATURATION_EL", "UNSATURATION_FL", "UNSATURATION_ZU", "UNSATURATION_EU", "UNSATURATION_FU", "UNSATURATION_ZU",
+  //"DEOXY", "METHYL", "ALDONICACID", "URONICACID", "KETONE_U", "HYDROXYL", "ALDEHYDE", "ULOSONIC" or "KETONE"
+  "Modifications": [
+    {
+      "PositionOne":1,
+      "Notation": "ALDONICACID"
+    },
+    {
+      "PositionOne": 2,
+      "Notation": "KETONE_U"
+    },
+    {
+      "PositionOne": 3,
+      "Notation": "DEOXY"
+    }
+  ],
+  //"Substituents"は置換基の数を持つことができる。
+  //どの"Substituents"も"PositionOne", "PositionTwo" and "Notation"で構成されている。
+  //"Position"は"position", "probability", "LinkageType"を持っておいて、親の情報をもっと詳細に表現している。
+  //幾つかの置換基はドナーの単糖に対して複数の結合を持っている
+  //"PositionTwo"は２つめの結合を示す。
+  //"Notation"は置換基の名前を示し、入手可能な置換基の記載が割り当てられる。
+  "Substituents": [
+    {
+      "PositionOne": {
+        "position": {
+          "ChildSide": [
+            0
+          ],
+          "ParentSide": [
+            4
+          ]
+        },
+        "Probability": {
+          "ChildSide": {
+            "High": 1,
+            "Low": 1
+          },
+          "ParentSide": {
+            "High": 1,
+            "Low": 1
+          }
+        },
+        "LinkageType": {
+          "ChildSide": "DEOXY",
+          "ParentSide": "H_AT_OH"
+        }
+      },
+      "PositionTwo": {
+        "position": {
+          "ChildSide": [
+            0
+          ],
+          "ParentSide": [
+            6
+          ]
+        },
+        "Probability": {
+          "ChildSide": {
+            "High": 1,
+            "Low": 1
+          },
+          "ParentSide": {
+            "High": 1,
+            "Low": 1
+          }
+        },
+        "LinkageType": {
+          "ChildSide": "DEOXY",
+          "ParentSide": "H_AT_OH"
+        }
+      },
+      "Notation": "X_PYRUVATE" //ピルビン酸 架橋している状態"4,6 Pyr"  もしくは、、、"2/3 pyr"
+    }
+  ],
+  //"Parent"は親サイドのグリコシド結合を示す。
+  //"Position"、"Probability"、"MultipleModification"、"LinkageType"を持つ
+  //"Position"はグリコシド結合の位置を示す。"ChildSide"と"ParentSide"を持つ
+  //"Probability"は結合の可能性を示す。"ChildSide"、"ParentSide"を持つ。
+  //それぞれ"High"と"Low"を持つ。いくつかのグリコシド結合が80％で構成されている場合、「低」および「高」には0.8が割り当てられる。
+  //"Bride"は架橋した置換基を示す。"Position"と"Notation"を持つ。
+  //"Bride"の"Position"は"ChildSide"と"ParentSide"を持ち、何らかのNumberを持つ。
+  //"Bride"の"Notation"は架橋置換基によって定義づけられる。
+  //もし、"Bride"の全てのブロックが空であれば、この結合は架橋した置換基を持たないことになる。
+  //"LinkageType"この結合の原子の状態を示す。"ParentSide"と"ChildSide"を持ち、"UNVALIDATED"がデフォルトの状態として割り当てられる。
+  //"LinkageType"は"H_AT_OD"、"DEOXY"、"H_LOSE"、"R_CONFIG"、"S_config"、"UNKNOWN"、"UNVALIDATE"、"NOMONOSACCHARAIDE"が選択される。
+  //"ParentNodeID"は親単糖のIDを示す。
+  "Parent": [
+    {
+      "Position": {
+        "ChildSide": [
+          1
+        ],
+        "ParentSide": [
+          3
+        ]
+      },
+      "Probability": {
+        "ChildSide": {
+          "High": 1,
+          "Low": 1
+        },
+        "ParentSide": {
+          "High": 1,
+          "Low": 1
+        }
+      },
+      "Bridge": {
+        "Position": {},
+        "Notation": ""
+      },
+      "LinkageType": {
+        "ChildSide": "UNVALIDATED",
+        "ParentSide": "UNVALIDATED"
+      },
+      "ParentNodeID": 1
+    }
+  ],
+  //"Fragment"は糖鎖フラグメントのルートを示し、"Edge"を含んでいる。
+  //"Fragment"は"Position"、"AnchorID"、"Probability"、"LinkageType"、"ParentNodeID"を持つ。
+  //これらの要素は"AnchorID"を除いて"Parent"と同じように振る舞う。
+  //IUPAC形式でこのFragmentがエンコードされた時、"AnchorID"はその識別として使用される。
+  //例えば、もし"AnchorID"が"1"ならこの"Fragment"は"Fragment = 1$"として表現される。
+  "Fragment": {
+    "Position": {
+      "ChildSide": [
+        2
+      ],
+      "ParentSide": [
+        6
+      ]
+    },
+    "AnchorID": 0,
+    "Probability": {
+      "ChildSide": {
+        "High": 100,
+        "Low": 100
+      },
+      "ParentSide": {
+        "High": 100,
+        "Low": 100
+      }
+    },
+    "LinkageType": {
+      "ChildSide": "UNVALIDATE",
+      "ParentSide": "UNVALIDATE"
+    },
+    "ParentNodeID": [
+      0,
+      5,
+      7
+    ]
+  },
+  //"Repeat"この単糖の繰り返し単位を示す。"Repeat"は"Min"、"Max"、"Position"、"Probability"、"Bride"、"LinkageType"、"ParentNodeID"を持つ。
+  //これらのパラメータhあ"Min"と"Max"以外は"Parent"と同じように扱われる。
+  //"Min"と"Max"は繰り返し回数の最小値と最大値を示す。
+  //これらのパラメータは"-1"か数字で表されるべきである。
+  //"Repeat"は一つ以上のリーピート単位を持つことができます。
+  //環状(childCyclic)構造は"Min"と"Max"に"0"が割り当てられる。
+  "Repeat": [
+    {
+      "Min": -1,
+      "Position": {
+        "ChildSide": [
+          1
+        ],
+        "ParentSide": [
+          4
+        ]
+      },
+      "Max": -1,
+      "probability": {
+        "ChildSide": {
+          "high": 1,
+          "Low": 1
+        },
+        "ParetSide": {
+          "High": 1,
+          "Low": 1
+        }
+      },
+      "Bride": "",
+      "LinkageType": {
+        "ChildSide": "UNVALDATED",
+        "parentSide": "UNVALIDATED"
+      },
+      "ParentNodeID": 2
+    }
+  ],
+  //"SubFragments"は独立した置換基を示す。従って、このブロックhあ単糖と違うブロックとして定義される。
+  //"SubFragments"は置換基の数を持つことができ、各断片はユニークな独立したnumberが割り当てられる。
+  //各フラグメントは"Position"、"Probability"、"Notation"、"LinkageType"、"ParentNode"を持っている。
+  //これらのパラメータは"Edge"と同じように操作される。
+  "SubFragments": {
+    "0": {
+      "Position": {
+        "ChildSide": [
+          -1
+        ],
+        "ParentSide": [
+          -1
+        ]
+      },
+      "Probability": {
+        "ChildSide": {
+          "High": 1,
+          "Low": 1
+        },
+        "ParentSide": {
+          "High": 1,
+          "Low": 1
+        }
+      },
+      "Notation": "ACETYL",
+      "LinkageType": {
+        "ChildSide": "UNVALDATED",
+        "ParentSide": "UNVALIDATED"
+      },
+      "ParentNodeID": [
+        7,
+        8,
+        11,
+        9,
+        5,
+        0,
+        1,
+        2,
+        3,
+        4,
+        10,
+        6
+      ]
+    }
+  }
+}
+
+
+/*{
+    "SubFragments": {},
+    "Monosaccharides": {
+        "0": {
+            "Modifications": [
+                {
+                    "PositionOne": 6,
+                    "Notation": "HYDROXYL"
+                }
+            ],
+            "TrivialName": [
+                "DGLC"
+            ],
+            "RingEnd": -1,
+            "AnomericSymbol": "UNKNOWN",
+            "Substituents": [
+                {
+                    "PositionOne": {
+                        "Position": {
+                            "ChildSide": [
+                                0
+                            ],
+                            "ParentSide": [
+                                2
+                            ]
+                        },
+                        "Probability": {
+                            "ChildSide": {
+                                "High": 100,
+                                "Low": 100
+                            },
+                            "ParentSide": {
+                                "High": 100,
+                                "Low": 100
+                            }
+                        },
+                        "LinkageType": {
+                            "ChildSide": "UNVALIDATED",
+                            "ParentSide": "UNVALIDATED"
+                        }
+                    },
+                    "PositionTwo": {},
+                    "Notation": "N_ACETYL"
+                }
+            ],
+            "SuperClass": "HEX",
+            "AnomericPosition": -1,
+            "RingStart": -1,
+            "Edge": {
+                "Parent": [],
+                "Repeat": [],
+                "Fragment": {}
+            }
+        },
+        "1": {
+            "Modifications": [
+                {
+                    "PositionOne": 6,
+                    "Notation": "HYDROXYL"
+                }
+            ],
+            "TrivialName": [
+                "DGLC"
+            ],
+            "RingEnd": 5,
+            "AnomericSymbol": "BETA",
+            "Substituents": [
+                {
+                    "PositionOne": {
+                        "Position": {
+                            "ChildSide": [
+                                0
+                            ],
+                            "ParentSide": [
+                                2
+                            ]
+                        },
+                        "Probability": {
+                            "ChildSide": {
+                                "High": 100,
+                                "Low": 100
+                            },
+                            "ParentSide": {
+                                "High": 100,
+                                "Low": 100
+                            }
+                        },
+                        "LinkageType": {
+                            "ChildSide": "UNVALIDATED",
+                            "ParentSide": "UNVALIDATED"
+                        }
+                    },
+                    "PositionTwo": {},
+                    "Notation": "N_ACETYL"
+                }
+            ],
+            "SuperClass": "HEX",
+            "AnomericPosition": 1,
+            "RingStart": 1,
+            "Edge": {
+                "Parent": [
+                    {
+                        "Position": {
+                            "ChildSide": [
+                                1
+                            ],
+                            "ParentSide": [
+                                4
+                            ]
+                        },
+                        "Probability": {
+                            "ChildSide": {
+                                "High": 100,
+                                "Low": 100
+                            },
+                            "ParentSide": {
+                                "High": 100,
+                                "Low": 100
+                            }
+                        },
+                        "MultipleModification": {
+                            "Position": {},
+                            "Notation": ""
+                        },
+                        "LinkageType": {
+                            "ChildSide": "UNVALIDATED",
+                            "ParentSide": "UNVALIDATED"
+                        },
+                        "ParentNodeID": 0
+                    }
+                ],
+                "Repeat": [],
+                "Fragment": {}
+            }
+        },
+        "2": {
+            "Modifications": [
+                {
+                    "PositionOne": 6,
+                    "Notation": "HYDROXYL"
+                }
+            ],
+            "TrivialName": [
+                "DMAN"
+            ],
+            "RingEnd": 5,
+            "AnomericSymbol": "BETA",
+            "Substituents": [],
+            "SuperClass": "HEX",
+            "AnomericPosition": 1,
+            "RingStart": 1,
+            "Edge": {
+                "Parent": [
+                    {
+                        "Position": {
+                            "ChildSide": [
+                                1
+                            ],
+                            "ParentSide": [
+                                4
+                            ]
+                        },
+                        "Probability": {
+                            "ChildSide": {
+                                "High": 100,
+                                "Low": 100
+                            },
+                            "ParentSide": {
+                                "High": 100,
+                                "Low": 100
+                            }
+                        },
+                        "MultipleModification": {
+                            "Position": {},
+                            "Notation": ""
+                        },
+                        "LinkageType": {
+                            "ChildSide": "UNVALIDATED",
+                            "ParentSide": "UNVALIDATED"
+                        },
+                        "ParentNodeID": 1
+                    }
+                ],
+                "Repeat": [],
+                "Fragment": {}
+            }
+        },
+        "3": {
+            "Modifications": [
+                {
+                    "PositionOne": 6,
+                    "Notation": "HYDROXYL"
+                }
+            ],
+            "TrivialName": [
+                "DMAN"
+            ],
+            "RingEnd": 5,
+            "AnomericSymbol": "ALPHA",
+            "Substituents": [],
+            "SuperClass": "HEX",
+            "AnomericPosition": 1,
+            "RingStart": 1,
+            "Edge": {
+                "Parent": [
+                    {
+                        "Position": {
+                            "ChildSide": [
+                                1
+                            ],
+                            "ParentSide": [
+                                3
+                            ]
+                        },
+                        "Probability": {
+                            "ChildSide": {
+                                "High": 100,
+                                "Low": 100
+                            },
+                            "ParentSide": {
+                                "High": 100,
+                                "Low": 100
+                            }
+                        },
+                        "MultipleModification": {
+                            "Position": {},
+                            "Notation": ""
+                        },
+                        "LinkageType": {
+                            "ChildSide": "UNVALIDATED",
+                            "ParentSide": "UNVALIDATED"
+                        },
+                        "ParentNodeID": 2
+                    }
+                ],
+                "Repeat": [],
+                "Fragment": {}
+            }
+        },
+        "4": {
+            "Modifications": [
+                {
+                    "PositionOne": 6,
+                    "Notation": "HYDROXYL"
+                }
+            ],
+            "TrivialName": [
+                "DMAN"
+            ],
+            "RingEnd": 5,
+            "AnomericSymbol": "ALPHA",
+            "Substituents": [],
+            "SuperClass": "HEX",
+            "AnomericPosition": 1,
+            "RingStart": 1,
+            "Edge": {
+                "Parent": [
+                    {
+                        "Position": {
+                            "ChildSide": [
+                                1
+                            ],
+                            "ParentSide": [
+                                6
+                            ]
+                        },
+                        "Probability": {
+                            "ChildSide": {
+                                "High": 100,
+                                "Low": 100
+                            },
+                            "ParentSide": {
+                                "High": 100,
+                                "Low": 100
+                            }
+                        },
+                        "MultipleModification": {
+                            "Position": {},
+                            "Notation": ""
+                        },
+                        "LinkageType": {
+                            "ChildSide": "UNVALIDATED",
+                            "ParentSide": "UNVALIDATED"
+                        },
+                        "ParentNodeID": 2
+                    }
+                ],
+                "Repeat": [],
+                "Fragment": {}
+            }
+        }
+    }
+}*/
+
+

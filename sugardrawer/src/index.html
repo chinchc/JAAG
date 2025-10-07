@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Modified by Chin Huang at University of Georgia for JAAG on 2025-10-01: integration/UI adjustments and export display. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SugarDrawer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+    <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+    <style>
+        /* Hide vertical scrollbar but keep functionality */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-y: hidden;
+        }
+        /* Hide scrollbars in containers while preserving scroll functionality */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+        html {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+        }
+    </style>
+</head>
+<body>
+    <div id="current-monosaccharide"></div>
+    <div id="titleHeader"></div>
+    <div id="interFace" oncontextmenu="return false;"></div>
+    <div id="menu" style="display: none" oncontextmenu="return false;"></div>
+    <div id="idtable" oncontextmenu="return false;"></div>
+    <div id="textArea" oncontextmenu="return false;"></div>
+    <div id="glycoctDisplay" style="display: none; margin: 20px; border: 1px solid #ddd; border-radius: 4px; background: #f9f9f9;">
+        <div style="padding: 10px; background: #e9ecef; border-bottom: 1px solid #ddd; font-weight: bold;">GlycoCT Output</div>
+        <textarea id="glycoctTextarea" readonly style="width: 1000px; min-height: 100px; border: none; padding: 15px; font-family: monospace; font-size: 12px; background: transparent; resize: vertical;" placeholder="GlycoCT will appear here automatically when you export"></textarea>
+    </div>
+</body>
+</html>

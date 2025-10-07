@@ -1,0 +1,25 @@
+--- a/src/js/models/glycomics/dictionary/Structures.js
++++ b/src/js/models/glycomics/dictionary/Structures.js
+@@ -134,7 +134,7 @@
+     },
+ 
+     gagdermatan: {
+-        glycoct: "RES\n1b:b-dgal-HEX-1:5\n2s:n-acetyl\n3b:b-dido-HEX-1:5|6:a\n4b:b-dgal-HEX-1:5\n5s:n-acetyl\n6b:b-dido-HEX-1:5|6:a\n7s:sulfate\n8s:sulfate\nLIN\n1:1d(2+1)2n\n2:1o(3+1)3d\n3:3o(4+1)4d\n4:4d(2+1)5n\n5:4o(3+1)6d\n6:4o(4+-1)7n\n7:1o(4+-1)8n"
++        glycoct: "RES\n1b:b-dgal-HEX-1:5\n2s:n-acetyl\n3b:a-lido-HEX-1:5|6:a\n4b:b-dgal-HEX-1:5\n5s:n-acetyl\n6b:a-lido-HEX-1:5|6:a\n7s:sulfate\n8s:sulfate\nLIN\n1:1d(2+1)2n\n2:1o(3+1)3d\n3:3o(4+1)4d\n4:4d(2+1)5n\n5:4o(3+1)6d\n6:4o(4+-1)7n\n7:1o(4+-1)8n"
+     },
+ 
+     gagkeratan: {
+@@ -142,11 +142,11 @@
+     },
+ 
+     gagheparin: {
+-        glycoct: "RES\n1b:b-dglc-HEX-1:5\n2s:n-sulfate\n3s:sulfate\n4b:a-dido-HEX-1:5|6:a\n5s:sulfate\n6b:b-dglc-HEX-1:5\n7s:n-sulfate\n8s:sulfate\n9b:a-dido-HEX-1:5|6:a\n10s:sulfate\n11s:sulfate\nLIN\n1:1d(2+-1)2n\n2:1o(3+-1)3n\n3:1o(4+1)4d\n4:4o(2+-1)5n\n5:4o(4+1)6d\n6:6d(2+-1)7n\n7:6o(3+-1)8n\n8:6o(4+1)9d\n9:6o(6+-1)10n\n10:1o(6+-1)11n"
++        glycoct: "RES\n1b:a-dglc-HEX-1:5\n2s:sulfate\n3b:a-lido-HEX-1:5|6:a\n4b:a-dglc-HEX-1:5\n5s:sulfate\n6b:a-lido-HEX-1:5|6:a\n7s:sulfate\n8s:n-sulfate\n9s:sulfate\n10s:sulfate\n11s:n-sulfate\nLIN\n1:1o(6+1)2n\n2:1o(4+1)3d\n3:3o(4+1)4d\n4:4o(6+1)5n\n5:4o(4+1)6d\n6:4o(3+1)7n\n7:4d(2+1)8n\n8:3o(2+1)9n\n9:1o(3+1)10n\n10:1d(2+1)11n"
+     },
+ 
+     gagheparan: {
+-        glycoct: "RES\n1b:b-dglc-HEX-1:5\n2s:n-acetyl\n3b:a-dido-HEX-1:5|6:a\n4s:sulfate\n5b:b-dglc-HEX-1:5\n6s:n-sulfate\n7b:a-dido-HEX-1:5|6:a\n8s:sulfate\n9s:sulfate\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3o(2+-1)4n\n4:3o(4+1)5d\n5:5d(2+-1)6n\n6:5o(4+1)7d\n7:5o(6+-1)8n\n8:1o(6+-1)9n"
++        glycoct: "RES\n1b:a-dglc-HEX-1:5\n2s:n-acetyl\n3b:a-lido-HEX-1:5|6:a\n4s:sulfate\n5b:a-dglc-HEX-1:5\n6s:n-sulfate\n7b:a-lido-HEX-1:5|6:a\n8s:sulfate\n9s:sulfate\nLIN\n1:1d(2+1)2n\n2:1o(4+1)3d\n3:3o(2+-1)4n\n4:3o(4+1)5d\n5:5d(2+-1)6n\n6:5o(4+1)7d\n7:5o(6+-1)8n\n8:1o(6+-1)9n"
+     },
+ 
+     milklac: {

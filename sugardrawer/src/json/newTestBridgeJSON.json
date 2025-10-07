@@ -1,0 +1,97 @@
+{
+  "Fragments": {},
+  "Repeat": {
+    "r0": {
+      "Min": -1,
+      "Position": {
+        "Acceptor": [
+          1
+        ],
+        "Donor": [
+          1
+        ]
+      },
+      "Max": -1,
+      "Start": "m0",
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "End": "m1",
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    }
+  },
+  "Edges": {
+    "e0": {
+      "Acceptor": "m0",
+      "Donor": "m1",
+      "Position": {
+        "Acceptor": [
+          4
+        ],
+        "Donor": [
+          3
+        ]
+      },
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    }
+  },
+  "Bridge": {
+    "b0": {
+      "Acceptor": "m0",
+      "Donor": "m1",
+      "Notation": "P",
+      "LinkageType": {
+        "Acceptor": "H_AT_OH",
+        "Donor": "DEOXY"
+      }
+    }
+  },
+  "Monosaccharides": {
+    "m0": {
+      "Modifications": [],
+      "TrivialName": [
+        "glc"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "b",
+      "AnomPosition": 1,
+      "Notation": "Glc"
+    },
+    "m1": {
+      "Modifications": [
+        {
+          "Position": [1],
+          "Notation": "HYDROXYL"
+        }
+      ],
+      "TrivialName": [
+        "gro"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "TRI",
+      "RingSize": "",
+      "AnomState": "o",
+      "AnomPosition": 0,
+      "Notation": "Gro"
+    }
+  }
+}

@@ -1,0 +1,356 @@
+{
+  "Fragments": {
+    "f0": {
+      "Acceptor": [
+        "m0",
+        "m4",
+        "m7"
+      ],
+      "Donor": "m8",
+      "Edge": {
+        "Position": {
+          "Acceptor": [
+            6
+          ],
+          "Donor": [
+            2
+          ]
+        },
+        "Probability": {
+          "High": 1,
+          "Low": 1
+        },
+        "LinkageType": {
+          "Acceptor": "UNVALIDATED",
+          "Donor": "UNVALIDATED"
+        }
+      }
+    },
+    "f1": {
+      "Acceptor": [
+        "m0",
+        "m4",
+        "m7"
+      ],
+      "Donor": "m9",
+      "Edge": {
+        "Position": {
+          "Acceptor": [
+            3
+          ],
+          "Donor": [
+            2
+          ]
+        },
+        "Probability": {
+          "High": 1,
+          "Low": 1
+        },
+        "LinkageType": {
+          "Acceptor": "UNVALIDATED",
+          "Donor": "UNVALIDATED"
+        }
+      }
+    }
+  },
+  "Repeat": {},
+  "Edges": {
+    "e5": {
+      "Acceptor": "m5",
+      "Donor": "m6",
+      "Position": {
+        "Acceptor": [
+          2
+        ],
+        "Donor": [
+          1
+        ]
+      },
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    },
+    "e6": {
+      "Acceptor": "m6",
+      "Donor": "m7",
+      "Position": {
+        "Acceptor": [
+          4
+        ],
+        "Donor": [
+          1
+        ]
+      },
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    },
+    "e0": {
+      "Acceptor": "m0",
+      "Donor": "m1",
+      "Position": {
+        "Acceptor": [
+          4
+        ],
+        "Donor": [
+          1
+        ]
+      },
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    },
+    "e1": {
+      "Acceptor": "m1",
+      "Donor": "m2",
+      "Position": {
+        "Acceptor": [
+          6
+        ],
+        "Donor": [
+          1
+        ]
+      },
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    },
+    "e2": {
+      "Acceptor": "m2",
+      "Donor": "m3",
+      "Position": {
+        "Acceptor": [
+          2
+        ],
+        "Donor": [
+          1
+        ]
+      },
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    },
+    "e3": {
+      "Acceptor": "m3",
+      "Donor": "m4",
+      "Position": {
+        "Acceptor": [
+          4
+        ],
+        "Donor": [
+          1
+        ]
+      },
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    },
+    "e4": {
+      "Acceptor": "m1",
+      "Donor": "m5",
+      "Position": {
+        "Acceptor": [
+          3
+        ],
+        "Donor": [
+          1
+        ]
+      },
+      "Probability": {
+        "High": 1,
+        "Low": 1
+      },
+      "LinkageType": {
+        "Acceptor": "UNVALIDATED",
+        "Donor": "UNVALIDATED"
+      }
+    }
+  },
+  "Bridge": {},
+  "Monosaccharides": {
+    "m0": {
+      "Modifications": [],
+      "TrivialName": [
+        "glc"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "",
+      "AnomState": "?",
+      "AnomPosition": -1,
+      "Notation": "Glc"
+    },
+    "m1": {
+      "Modifications": [],
+      "TrivialName": [
+        "man"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "b",
+      "AnomPosition": 1,
+      "Notation": "Man"
+    },
+    "m2": {
+      "Modifications": [],
+      "TrivialName": [
+        "man"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "a",
+      "AnomPosition": 1,
+      "Notation": "Man"
+    },
+    "m3": {
+      "Modifications": [],
+      "TrivialName": [
+        "glc"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "b",
+      "AnomPosition": 1,
+      "Notation": "GlcNAc"
+    },
+    "m4": {
+      "Modifications": [],
+      "TrivialName": [
+        "gal"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "b",
+      "AnomPosition": 1,
+      "Notation": "Gal"
+    },
+    "m5": {
+      "Modifications": [],
+      "TrivialName": [
+        "man"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "a",
+      "AnomPosition": 1,
+      "Notation": "Man"
+    },
+    "m6": {
+      "Modifications": [],
+      "TrivialName": [
+        "glc"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "b",
+      "AnomPosition": 1,
+      "Notation": "GlcNAc"
+    },
+    "m7": {
+      "Modifications": [],
+      "TrivialName": [
+        "gal"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "RingSize": "p",
+      "AnomState": "b",
+      "AnomPosition": 1,
+      "Notation": "Gal"
+    },
+    "m8": {
+      "Modifications": [],
+      "TrivialName": [
+        "gro",
+        "gal"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d",
+        "d"
+      ],
+      "SuperClass": "NON",
+      "RingSize": "p",
+      "AnomState": "a",
+      "AnomPosition": 2,
+      "Notation": "Neu5Ac"
+    },
+    "m9": {
+      "Modifications": [],
+      "TrivialName": [
+        "gro",
+        "gal"
+      ],
+      "Substituents": [],
+      "Configuration": [
+        "d",
+        "d"
+      ],
+      "SuperClass": "NON",
+      "RingSize": "p",
+      "AnomState": "a",
+      "AnomPosition": 2,
+      "Notation": "Neu5Ac"
+    }
+  }
+}

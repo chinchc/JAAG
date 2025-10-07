@@ -1,0 +1,55 @@
+{
+  "Composition": {
+    "c0": {
+      "monosaccharide": "m0",
+      "counter":  3
+    },
+    "c1": {
+      "monosaccharide": "m1",
+      "counter":  1
+    },
+    "c2": {
+      "monosaccharide": "m2",
+      "counter":  3
+    }
+  },
+  "Fragments": {},
+  "Repeat": {},
+  "Edges": {},
+  "Bridge": {},
+  "Monosaccharides": {
+    "m0": {
+      "Modifications": [],
+      "TrivialName": [],
+      "Substituents": [],
+      "Configuration": [],
+      "SuperClass": "HEX",
+      "RingSize": "",
+      "AnomState": "?",
+      "AnomPosition": -1,
+      "Notation": "HexNAc"
+    },
+    "m1": {
+      "Modifications": [],
+      "TrivialName": [],
+      "Substituents": [],
+      "Configuration": [],
+      "SuperClass": "HEX",
+      "RingSize": "",
+      "AnomState": "?",
+      "AnomPosition": -1,
+      "Notation": "HexNAc"
+    },
+    "m2": {
+      "Modifications": [],
+      "TrivialName": [],
+      "Substituents": [],
+      "Configuration": [],
+      "SuperClass": "HEX",
+      "RingSize": "",
+      "AnomState": "?",
+      "AnomPosition": -1,
+      "Notation": "HexNAc"
+    }
+  }
+}

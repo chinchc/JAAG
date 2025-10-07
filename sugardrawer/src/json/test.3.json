@@ -1,0 +1,506 @@
+{
+  "SubFragments": {},
+  "Monosaccharides": {
+    "0": {
+      "Modifications": [],
+      "TrivialName": [
+        "glc"
+      ],
+      "RingEnd": -1,
+      "AnomericSymbol": "UNKNOWN",
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "TrivialNotation": "Assigned",
+      "AnomericPosition": -1,
+      "RingStart": -1,
+      "Edge": {
+        "Parent": [],
+        "Repeat": [],
+        "Fragment": {}
+      }
+    },
+    "1": {
+      "Modifications": [],
+      "TrivialName": [
+        "glc"
+      ],
+      "RingEnd": 5,
+      "AnomericSymbol": "BETA",
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "TrivialNotation": "Api",
+      "AnomericPosition": 1,
+      "RingStart": 1,
+      "Edge": {
+        "Parent": [
+          {
+            "Position": {
+              "ChildSide": [
+                1
+              ],
+              "ParentSide": [
+                4
+              ]
+            },
+            "Probability": {
+              "ChildSide": {
+                "High": 1,
+                "Low": 1
+              },
+              "ParentSide": {
+                "High": 1,
+                "Low": 1
+              }
+            },
+            "Bridge": {},
+            "LinkageType": {
+              "ChildSide": "UNVALIDATED",
+              "ParentSide": "UNVALIDATED"
+            },
+            "ParentNodeID": 0
+          }
+        ],
+        "Repeat": [],
+        "Fragment": {}
+      }
+    },
+    "2": {
+      "Modifications": [],
+      "TrivialName": [
+        "man"
+      ],
+      "RingEnd": 5,
+      "AnomericSymbol": "BETA",
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "TrivialNotation": "Fru",
+      "AnomericPosition": 1,
+      "RingStart": 1,
+      "Edge": {
+        "Parent": [
+          {
+            "Position": {
+              "ChildSide": [
+                1
+              ],
+              "ParentSide": [
+                4
+              ]
+            },
+            "Probability": {
+              "ChildSide": {
+                "High": 1,
+                "Low": 1
+              },
+              "ParentSide": {
+                "High": 1,
+                "Low": 1
+              }
+            },
+            "Bridge": {},
+            "LinkageType": {
+              "ChildSide": "UNVALIDATED",
+              "ParentSide": "UNVALIDATED"
+            },
+            "ParentNodeID": 1
+          }
+        ],
+        "Repeat": [],
+        "Fragment": {}
+      }
+    },
+    "3": {
+      "Modifications": [],
+      "TrivialName": [
+        "man"
+      ],
+      "RingEnd": 5,
+      "AnomericSymbol": "ALPHA",
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "TrivialNotation": "Tag",
+      "AnomericPosition": 1,
+      "RingStart": 1,
+      "Edge": {
+        "Parent": [
+          {
+            "Position": {
+              "ChildSide": [
+                1
+              ],
+              "ParentSide": [
+                6
+              ]
+            },
+            "Probability": {
+              "ChildSide": {
+                "High": 1,
+                "Low": 1
+              },
+              "ParentSide": {
+                "High": 1,
+                "Low": 1
+              }
+            },
+            "Bridge": {},
+            "LinkageType": {
+              "ChildSide": "UNVALIDATED",
+              "ParentSide": "UNVALIDATED"
+            },
+            "ParentNodeID": 2
+          }
+        ],
+        "Repeat": [],
+        "Fragment": {}
+      }
+    },
+    "4": {
+      "Modifications": [],
+      "TrivialName": [
+        "man"
+      ],
+      "RingEnd": 5,
+      "AnomericSymbol": "ALPHA",
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "TrivialNotation": "Sor",
+      "AnomericPosition": 1,
+      "RingStart": 1,
+      "Edge": {
+        "Parent": [
+          {
+            "Position": {
+              "ChildSide": [
+                1
+              ],
+              "ParentSide": [
+                3
+              ]
+            },
+            "Probability": {
+              "ChildSide": {
+                "High": 1,
+                "Low": 1
+              },
+              "ParentSide": {
+                "High": 1,
+                "Low": 1
+              }
+            },
+            "Bridge": {},
+            "LinkageType": {
+              "ChildSide": "UNVALIDATED",
+              "ParentSide": "UNVALIDATED"
+            },
+            "ParentNodeID": 2
+          }
+        ],
+        "Repeat": [],
+        "Fragment": {}
+      }
+    },
+    "5": {
+      "Modifications": [],
+      "TrivialName": [
+        "glc"
+      ],
+      "RingEnd": 5,
+      "AnomericSymbol": "BETA",
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "TrivialNotation": "Psi",
+      "AnomericPosition": 1,
+      "RingStart": 1,
+      "Edge": {
+        "Parent": [
+          {
+            "Position": {
+              "ChildSide": [
+                1
+              ],
+              "ParentSide": [
+                4
+              ]
+            },
+            "Probability": {
+              "ChildSide": {
+                "High": 1,
+                "Low": 1
+              },
+              "ParentSide": {
+                "High": 1,
+                "Low": 1
+              }
+            },
+            "Bridge": {},
+            "LinkageType": {
+              "ChildSide": "UNVALIDATED",
+              "ParentSide": "UNVALIDATED"
+            },
+            "ParentNodeID": 2
+          }
+        ],
+        "Repeat": [],
+        "Fragment": {}
+      }
+    },
+    "6": {
+      "Modifications": [],
+      "TrivialName": [
+        "glc"
+      ],
+      "RingEnd": 5,
+      "AnomericSymbol": "BETA",
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "TrivialNotation": "MurNAc",
+      "AnomericPosition": 1,
+      "RingStart": 1,
+      "Edge": {
+        "Parent": [
+          {
+            "Position": {
+              "ChildSide": [
+                1
+              ],
+              "ParentSide": [
+                2
+              ]
+            },
+            "Probability": {
+              "ChildSide": {
+                "High": 1,
+                "Low": 1
+              },
+              "ParentSide": {
+                "High": 1,
+                "Low": 1
+              }
+            },
+            "Bridge": {},
+            "LinkageType": {
+              "ChildSide": "UNVALIDATED",
+              "ParentSide": "UNVALIDATED"
+            },
+            "ParentNodeID": 2
+          }
+        ],
+        "Repeat": [],
+        "Fragment": {}
+      }
+    },
+    "7": {
+      "Modifications": [],
+      "TrivialName": [
+        "man"
+      ],
+      "RingEnd": 5,
+      "AnomericSymbol": "ALPHA",
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "TrivialNotation": "MurNGc",
+      "AnomericPosition": 1,
+      "RingStart": 1,
+      "Edge": {
+        "Parent": [
+          {
+            "Position": {
+              "ChildSide": [
+                1
+              ],
+              "ParentSide": [
+                5
+              ]
+            },
+            "Probability": {
+              "ChildSide": {
+                "High": 1,
+                "Low": 1
+              },
+              "ParentSide": {
+                "High": 1,
+                "Low": 1
+              }
+            },
+            "Bridge": {},
+            "LinkageType": {
+              "ChildSide": "UNVALIDATED",
+              "ParentSide": "UNVALIDATED"
+            },
+            "ParentNodeID": 2
+          }
+        ],
+        "Repeat": [],
+        "Fragment": {}
+      }
+    },
+    "8": {
+      "Modifications": [],
+      "TrivialName": [
+        "man"
+      ],
+      "RingEnd": 5,
+      "AnomericSymbol": "ALPHA",
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "TrivialNotation": "Mur",
+      "AnomericPosition": 1,
+      "RingStart": 1,
+      "Edge": {
+        "Parent": [
+          {
+            "Position": {
+              "ChildSide": [
+                1
+              ],
+              "ParentSide": [
+                6
+              ]
+            },
+            "Probability": {
+              "ChildSide": {
+                "High": 1,
+                "Low": 1
+              },
+              "ParentSide": {
+                "High": 1,
+                "Low": 1
+              }
+            },
+            "Bridge": {},
+            "LinkageType": {
+              "ChildSide": "UNVALIDATED",
+              "ParentSide": "UNVALIDATED"
+            },
+            "ParentNodeID": 1
+          }
+        ],
+        "Repeat": [],
+        "Fragment": {}
+      }
+    },
+    "9": {
+      "Modifications": [],
+      "TrivialName": [
+        "man"
+      ],
+      "RingEnd": 5,
+      "AnomericSymbol": "ALPHA",
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "TrivialNotation": "sia",
+      "AnomericPosition": 1,
+      "RingStart": 1,
+      "Edge": {
+        "Parent": [
+          {
+            "Position": {
+              "ChildSide": [
+                1
+              ],
+              "ParentSide": [
+                6
+              ]
+            },
+            "Probability": {
+              "ChildSide": {
+                "High": 1,
+                "Low": 1
+              },
+              "ParentSide": {
+                "High": 1,
+                "Low": 1
+              }
+            },
+            "Bridge": {},
+            "LinkageType": {
+              "ChildSide": "UNVALIDATED",
+              "ParentSide": "UNVALIDATED"
+            },
+            "ParentNodeID": 8
+          }
+        ],
+        "Repeat": [],
+        "Fragment": {}
+      }
+    },
+    "10": {
+      "Modifications": [],
+      "TrivialName": [
+        "man"
+      ],
+      "RingEnd": 5,
+      "AnomericSymbol": "ALPHA",
+      "Substituents": [],
+      "Configuration": [
+        "d"
+      ],
+      "SuperClass": "HEX",
+      "TrivialNotation": "Man",
+      "AnomericPosition": 1,
+      "RingStart": 1,
+      "Edge": {
+        "Parent": [
+          {
+            "Position": {
+              "ChildSide": [
+                1
+              ],
+              "ParentSide": [
+                3
+              ]
+            },
+            "Probability": {
+              "ChildSide": {
+                "High": 1,
+                "Low": 1
+              },
+              "ParentSide": {
+                "High": 1,
+                "Low": 1
+              }
+            },
+            "Bridge": {},
+            "LinkageType": {
+              "ChildSide": "UNVALIDATED",
+              "ParentSide": "UNVALIDATED"
+            },
+            "ParentNodeID": 8
+          }
+        ],
+        "Repeat": [],
+        "Fragment": {}
+      }
+    }
+  }
+}
