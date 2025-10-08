@@ -1,7 +1,7 @@
 # JAAG: a JSON input file Assembler for AlphaFold 3 with Glycan integration 
 
 JAAG is a comprehensive web-based tool for generating AlphaFold 3 input JSON files with advanced glycan structure support and integrated SugarDrawer functionality.
-
+Web tool link: https://biofgreat.org/JAAG/
 ## Key Features
 
 ### AlphaFold 3 JSON Generation
@@ -22,7 +22,7 @@ JAAG is a comprehensive web-based tool for generating AlphaFold 3 input JSON fil
 - **Glycosylation Sites**: Manual addition of custom glycosylation sites
 ### Glycan-related AF3 Model Interpretation: 
 Chin Huang, Natarajan Kannan, Kelley W Moremen, Modeling glycans with AlphaFold 3: capabilities, caveats, and limitations, Glycobiology, Volume 35, Issue 10, October 2025, cwaf048, https://doi.org/10.1093/glycob/cwaf048
-## Quick Start (through server)
+## Quick Start (through server: https://biofgreat.org/JAAG/)
 1. **Basic Setup**: Enter job name
 2. **Add Sequences**: Use the sequence buttons to add proteins, ligands, RNA, or DNA
 3. **Draw Glycans**: Click the pencil icon to open SugarDrawer for glycan structure drawing  
