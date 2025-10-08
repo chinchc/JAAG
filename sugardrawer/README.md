@@ -1,4 +1,5 @@
 # SugarDrawer
+* https://gitlab.com/glycoinfo/sugardrawer/sugardrawer
 * [Japanese edition](README_jp.md)
 * latest version: 1.8.1 
   * [Change log](./CHANGELOG.md#170-20211208)
@@ -6,6 +7,8 @@
 ## JAAG Integration Notes
 
 This repository is vendored into JAAG and built as part of JAAG’s frontend. Some changes have been made to the SugarDrawer UI to accommodate JAAG. During install/build, JAAG applies small corrective patches to SugarSketcher structures via `apply-patches.js`. For Apache-2.0 compliance, JAAG automatically inserts a short "modified by" header into SugarDrawer and the patched SugarSketcher file to indicate changes were made for integration.
+
+The original SugarDrawer is here: https://gitlab.com/glycoinfo/sugardrawer/sugardrawer. The following information was copied from SugarDrawer:
 
 ## Requirement
 * JavaScript (ECMAScript2015, ES6)
