@@ -5,7 +5,7 @@
 
 ## JAAG Integration Notes
 
-This repository is vendored into JAAG and built as part of JAAG’s frontend. During install/build, JAAG applies small corrective patches to SugarSketcher structures via `apply-patches.js`. For Apache-2.0 compliance, JAAG automatically inserts a short "modified by" header into the patched SugarSketcher file to indicate changes were made for integration.
+This repository is vendored into JAAG and built as part of JAAG’s frontend. Some changes have been made to the SugarDrawer UI to accommodate JAAG. During install/build, JAAG applies small corrective patches to SugarSketcher structures via `apply-patches.js`. For Apache-2.0 compliance, JAAG automatically inserts a short "modified by" header into SugarDrawer and the patched SugarSketcher file to indicate changes were made for integration.
 
 ## Requirement
 * JavaScript (ECMAScript2015, ES6)
