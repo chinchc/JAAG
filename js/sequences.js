@@ -4303,7 +4303,15 @@ async function processGlycosylationSites(sequenceId, proteinChainId, multimerCha
                             finalCCDs = finalCCDs.concat(substituentResult.substituentCCDs);
                         }
                     }
-
+                    
+                    // Add substituent bonds to converted bonds
+                    if (substituentResult.additionalBonds && substituentResult.additionalBonds.length > 0) {
+                        if (!converted.bondedAtomPairs) {
+                            converted.bondedAtomPairs = [];
+                        }
+                        converted.bondedAtomPairs.push(...substituentResult.additionalBonds);
+                    }
+                    
                     // Handle required userCCDs
                     if (substituentResult.requiredUserCCDs && Object.keys(substituentResult.requiredUserCCDs).length > 0) {
                         if (!window.app.userCCDs) {
