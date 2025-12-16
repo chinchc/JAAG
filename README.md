@@ -2,8 +2,8 @@
 
 JAAG is a comprehensive web-based tool for generating AlphaFold 3 input JSON files with advanced glycan structure support and integrated SugarDrawer functionality.  
 Web tool link: https://biofgreat.org/JAAG/  
-Full tutorial PDF: https://biofgreat.org/Tutorial.pdf  
-Full tutorial PowerPoint with animation: https://biofgreat.org/Tutorial.pptx
+Full tutorial PDF: https://www.biofgreat.org/JAAG/Tutorial.pdf  
+Full tutorial PowerPoint with animation: https://biofgreat.org/JAAG/Tutorial.pptx
 
 ## Key Features
 
